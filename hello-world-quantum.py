@@ -7,8 +7,8 @@ from braket.aws import AwsDevice
 circuit = Circuit().h(0).measure(0)
 
 # Use local simulator (no cost)
-# device = LocalSimulator()
-device = AwsDevice("arn:aws:braket:us-west-1::device/qpu/rigetti/Ankaa-3")
+device = LocalSimulator()
+# device = AwsDevice("arn:aws:braket:us-west-1::device/qpu/rigetti/Ankaa-3")
 
 # Run the circuit
 result = device.run(circuit, shots=100).result()
